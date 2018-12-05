@@ -1,0 +1,191 @@
+var button;
+
+function setup() {
+  createCanvas(1090,635);
+  background (255, 205, 188);
+  fill(255, 121, 76);
+  noStroke();
+  ellipse(500,300,300,300);
+fill(255,255,255);
+textSize(45);
+textFont('Helvatica');
+text("Fire Disaster",385,300);
+text("Simulator",405,345);
+    button = createButton('Click to Start');
+    button.position(19, 19);
+    button.mousePressed(changeBackground);
+}
+function changeBackground(){
+  createCanvas (1090,635);
+  background (255, 205, 188);
+    button.remove();
+  noStroke();
+  fill(255, 121, 76);
+  rect(400,0,300,200);
+  rect(20,400,300,200);
+  rect(400,400,300,200);
+  rect(780,400,300,200);
+fill(255,255,255);
+textSize(15);
+textFont('Helvatica');
+text("Your one-story house is on fire,",450,50);
+text("and the smoke is making it hard to breathe.",420,80);
+text("What do you do?",480,120);
+text ('Jump out the window!',100,430);
+text('Try to put out the fire.',470,430);
+text('Try to salvage your personal belongings.',800,430)
+    button1 = createButton ('click me!');
+    button1.position(130,480)
+    button1.mousePressed(Continue);
+    button2 = createButton ('click me!!!');
+    button2.position(870,480);
+    button2.mousePressed (Die);
+    button3 = createButton ('click me!!');
+    button3.position(500,480);
+    button3.mousePressed (Die);
+}
+function Die (){
+  createCanvas (1090,635);
+  background(0,0,0);
+fill (255,255,255);
+textSize (36);
+textFont ('Helvatica');
+text ("Incorrect, you should try to do the safest option in a case of emergency.",10,300);
+    button4 = createButton ('Click to Restart.');
+    button4.position(480,340)
+    button4.mousePressed(GoBack);
+    button1.remove();
+    button2.remove();
+    button3.remove();
+    button5.remove();
+    button6.remove();
+    button7.remove();
+    button8.remove();
+    button9.remove();
+    button10.remove();
+    button11.remove();
+    button12.remove();
+}
+function GoBack(){
+    button4.remove();
+  createCanvas(1090,635);
+  background (255, 205, 188);
+  fill(255, 121, 76);
+  noStroke();
+  ellipse(500,300,300,300);
+  fill(255,255,255);
+textSize(45);
+textFont('Helvatica');
+text("Fire Disaster",385,300);
+text("Simulator",405,345);
+    button = createButton('Click to Start');
+    button.position(19, 19);
+    button.mousePressed(changeBackground);
+
+}
+
+function Continue (){
+createCanvas (1090,635);
+background (255, 205, 188);
+    button1.remove();
+    button2.remove();
+    button3.remove();
+  noStroke();
+  fill(255, 121, 76);
+  rect(400,0,300,200);
+  fill(255,255,255);
+textSize(15);
+textFont('Helvatica');
+text('Congratulations! You Chose correctly!',430,80);
+text('If you are in a situation where you cannot',420,100);
+text('breathe properly, you should immiedietely ',420,120);
+text('evacuate.',510,140);
+    button = createButton('Click to Continue.');
+    button.position(485, 160);
+    button.mousePressed(Continue2);
+}
+function Continue2 (){
+  createCanvas (1090,635);
+  background (255, 205, 188);
+    button.remove();
+  noStroke();
+  fill(255, 121, 76);
+  rect(400,0,300,200);
+  rect(20,400,300,200);
+  rect(400,400,300,200);
+  rect(780,400,300,200);
+  fill(255,255,255);
+textSize(15);
+textFont('Helvatica');
+text("You accidentally knock over a botle",450,50);
+text("of petrol near a heat source and it catches fire.",420,80);
+text("What do you do?",500,120);
+text ('Put out the fire with water nearby!',70,430);
+text('Get a fire extinguisher.',470,430);
+text('Suffocate the fire with a wool blanket.',810,430)
+    button5 = createButton ('click me!');
+    button5.position(130,480)
+    button5.mousePressed(Die);
+    button6 = createButton ('click me!!!');
+    button6.position(870,480);
+    button6.mousePressed (Die);
+    button7 = createButton ('click me!!');
+    button7.position(500,480);
+    button7.mousePressed (Continue3);
+
+}
+function Continue3 (){
+  createCanvas (1090,635);
+  background (255, 205, 188);
+    button5.remove();
+    button6.remove();
+    button7.remove();
+  noStroke();
+  fill(255, 121, 76);
+  rect(400,0,300,200);
+fill(255,255,255);
+textSize(15);
+textFont('Helvatica');
+text('Congratulations! You Chose correctly!',430,70);
+text('If you are in a situation where you are',430,90);
+text('near an oil fire, you should not use water or',420,110);
+text('flammable objects to try to put out the fire,',430,130);
+text('unless you know you have an extinguisher',420,150);
+text('with water in it.',485,170);
+    button8 = createButton('Click to Continue.');
+    button8.position(485, 180);
+    button8.mousePressed(GoOn);
+}
+function GoOn (){
+  createCanvas (1090,635);
+  background (255, 205, 188);
+  button8.remove();
+  noStroke();
+  fill(255, 121, 76);
+  rect(400,0,300,200);
+  rect(20,400,300,200);
+  rect(400,400,300,200);
+  rect(780,400,300,200);
+fill(255,255,255);
+textSize(15);
+textFont('Helvatica');
+text("You have several candles lit in your house.",440,50);
+text("You leave the room with them, ",440,80);
+text("and they somehow fall over.", 445,120)
+text("What do you do?",500,160);
+text ('Put out the fire with water nearby!',70,430);
+text('Get a fire extinguisher.',470,430);
+text('Suffocate the fire with a wool blanket.',830,430);
+    button10 = createButton ('click me!');
+    button10.position(130,480)
+    button10.mousePressed(Die);
+    button11 = createButton ('click me!!!');
+    button11.position(870,480);
+    button11.mousePressed (Continue4);
+    button12 = createButton ('click me!!');
+    button12.position(500,480);
+    button12.mousePressed (Die);
+}
+function Continue4 (){
+
+}
